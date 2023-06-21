@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+<!--render a form with boostrap automatic template-->
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block app_content %}
+
+    <h1>{{_('Registration')}}</h1>
+    <div class="row">
+        <div class="col-md-4">
+            {{ wtf.quick_form(form)}}
+        </div>
+    </div>
+    <p>
+       {{_('already a User?')}}
+        <a href="{{url_for('auth.login')}}">{{_('Sign In')}}</a>
+    </p>
+{% endblock %}

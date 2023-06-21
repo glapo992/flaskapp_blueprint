@@ -1,0 +1,2 @@
+{{ user.username }}, to reset the password click in the link:
+{{ url_for('auth.reset_password', token = token, _external = True)}}
