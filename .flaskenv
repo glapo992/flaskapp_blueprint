@@ -1,4 +1,4 @@
-FLASK_APP=microblog.py
+FLASK_APP=main.py
 SQLALCHEMY_DATABASE_URI=app.db
 FLASK_ENV=production
 FLASK_DEBUG=0

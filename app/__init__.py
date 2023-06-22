@@ -15,6 +15,10 @@ except psycopg2.DatabaseError as exeption:
     print ('database connection error')
     raise exeption 
 
+#language supp
+from flask_babel import Babel, _, lazy_gettext as _l
+from flask import request
+babel = Babel()
 
 # Login
 from flask_login import LoginManager 
@@ -95,7 +99,7 @@ def create_app(config_class = Config):
                           app.config['MAIL_PORT']), 
                 fromaddr='no-reply@' + app.config['MAIL_SERVER'],
                 toaddrs=app.config['ADMINS'], 
-                subject='Microblog error',
+                subject='application error',
                 credentials=auth, secure=secure) 
             
             mail_handler.setLevel(logging.ERROR)  # level of the log reported (DEBUG, INFO, WARNING, ERROR, CRITICAL)
@@ -113,7 +117,7 @@ def create_app(config_class = Config):
         app.logger.addHandler(file_Handler)
 
         app.logger.setLevel(logging.INFO)
-        app.logger.info('Microblog startup')
+        app.logger.info('application startup')
         
     return app
 

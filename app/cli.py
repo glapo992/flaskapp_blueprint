@@ -13,7 +13,7 @@ import click #this is the package on which flask provides the cli interface
 def register(app):
     """since these command are registered at startup, current_app doesn't work(is created after a request)
     this wrapper function can pass the variable 
-    register is called in the microblog.py file"""
+    register is called in the main.py file"""
     @app.cli.group() 
     def translate():
         """easy translation and localization commands"""

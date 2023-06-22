@@ -1,0 +1,13 @@
+--- samnple content of .env file: this should not be included in version control since contains sensititve informations
+
+SECRET_KEY=a-really-long-and-unique-key-that-nobody-knows
+MAIL_SERVER=localhost
+MAIL_PORT=8025
+MS_TRANSLATOR_KEY=''
+
+
+DB_USERNAME=''
+DB_PASSWORD=''
+DB_HOST=''
+DB_DB_NAME=''
+

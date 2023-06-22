@@ -4,4 +4,4 @@ from flask import Blueprint
 # name of the blueprint, name of the base module (__name__), template_folder= name of the folder where template are stored 
 bp = Blueprint('translation',__name__)
 
-from app.errors import routes
+from app.translation import routes

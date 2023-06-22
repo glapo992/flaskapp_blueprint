@@ -34,10 +34,18 @@ def translate(text:str, source_language:str, dest_language:str)->str:
 
 
 def deep_translate(text:str, dest_language:str)->str:
-    """"""
+    """calls to deepl api for text translation, alternative to microsoft above
+
+    :param text: text to translate
+    :type text: str
+    :param dest_language: code of the target language
+    :type dest_language: str
+    :return: text translated
+    :rtype: str
+    """
     if 'DEEPL_TRANSLATOR_KEY' in current_app.config or current_app.config['DEEPL_TRANSLATOR_KEY']:
         auth_key = current_app.config['DEEPL_TRANSLATOR_KEY']
         translator = deepl.Translator(auth_key=auth_key)
         result = translator.translate_text(text=text, target_lang=dest_language)
-        return result.text
+        return result
 
