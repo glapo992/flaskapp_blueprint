@@ -1,4 +1,4 @@
-2023-06-22 11:06:52,589 ERROR: Exception on / [GET] [in /home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py:1414]
+2023-06-22 11:06:33,752 ERROR: Exception on / [GET] [in /home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
     response = self.full_dispatch_request()
@@ -30,16 +30,16 @@ Traceback (most recent call last):
     {% block body -%}
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
     {% block navbar %}
-  File "/home/flask_blueprint/app/templates/base.html", line 53, in block 'navbar'
-    <li><a href="{{ url_for('blog.explore') }}">Explore</a></li>
+  File "/home/flask_blueprint/app/templates/base.html", line 48, in block 'navbar'
+    <a class="navbar-brand" href="{{ url_for('main.index') }}">LOGO</a>
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
     return self.handle_url_build_error(error, endpoint, values)
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
     rv = url_adapter.build(  # type: ignore[union-attr]
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 947, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'blog.explore'. Did you mean 'blog.user' instead?
-2023-06-22 11:06:52,676 ERROR: Exception on /favicon.ico [GET] [in /home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py:1414]
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.index'. Did you mean 'blog.index' instead?
+2023-06-22 11:06:33,826 ERROR: Exception on /favicon.ico [GET] [in /home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py:1414]
 Traceback (most recent call last):
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
     rv = self.dispatch_request()
@@ -86,13 +86,13 @@ Traceback (most recent call last):
     {% block body -%}
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 21, in block 'body'
     {% block navbar %}
-  File "/home/flask_blueprint/app/templates/base.html", line 53, in block 'navbar'
-    <li><a href="{{ url_for('blog.explore') }}">Explore</a></li>
+  File "/home/flask_blueprint/app/templates/base.html", line 48, in block 'navbar'
+    <a class="navbar-brand" href="{{ url_for('main.index') }}">LOGO</a>
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py", line 1697, in url_for
     return self.handle_url_build_error(error, endpoint, values)
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/flask/app.py", line 1686, in url_for
     rv = url_adapter.build(  # type: ignore[union-attr]
   File "/home/flask_blueprint/venv/lib/python3.10/site-packages/werkzeug/routing/map.py", line 947, in build
     raise BuildError(endpoint, values, method, self)
-werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'blog.explore'. Did you mean 'blog.user' instead?
-2023-06-22 11:07:29,637 INFO: application startup [in /home/flask_blueprint/app/__init__.py:120]
+werkzeug.routing.exceptions.BuildError: Could not build url for endpoint 'main.index'. Did you mean 'blog.index' instead?
+2023-06-22 11:06:50,649 INFO: application startup [in /home/flask_blueprint/app/__init__.py:120]
