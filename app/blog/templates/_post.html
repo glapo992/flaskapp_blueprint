@@ -2,15 +2,15 @@
 <table class="table table-hover">
     <tr>
         <td width="64px">
-            <a href="{{url_for('main.user', username = post.author.username)}}">
+            <a href="{{url_for('blog.user', username = post.author.username)}}">
         </td>
         <td class="post_body">
-            <a href="{{url_for('main.user', username = post.author.username)}}"> {{post.author.username}}</a> 
+            <a href="{{url_for('blog.user', username = post.author.username)}}"> {{post.author.username}}</a> 
             {{_('says')}} {{ moment(post.timestamp).fromNow() }}<br> 
             <span id="post{{post.id}}">{{post.body}}</span>   <!--assign a id to the span element that contains the post-->
         </td>
         <td navbar-right>{% if current_user == post.author and form_del %}
-            <form action="{{url_for('main.delete_post', del_post_id = post.id)}}", method ='post'>
+            <form action="{{url_for('blog.delete_post', del_post_id = post.id)}}", method ='post'>
                 {{ form_del.hidden_tag() }}
                 {{ form_del.submit(value = _('Delete post')) }}
             </form>

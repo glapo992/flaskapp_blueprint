@@ -16,16 +16,16 @@ def send_async_email (app, msg):
 def send_email(subject, sender, recipients, text_body:str, html_body):
     """allows to send emails to a user
 
-    :param subject: the subject of the email 
-    :type subject: str
-    :param sender: sender of the email
-    :type sender: str
+    :param subject   : the subject of the email 
+    :type subject    : str
+    :param sender    : sender of the email
+    :type sender     : str
     :param recipients: destination mail addr  
-    :type recipients: str
-    :param text_body: text body of the email
-    :type text_body: str
-    :param html_body: html body of the email
-    :type html_body: str html
+    :type recipients : str
+    :param text_body : text body of the email
+    :type text_body  : str
+    :param html_body : html body of the email
+    :type html_body  : str html
     """
     msg = Message(subject=subject, sender=sender, recipients=recipients)
     msg.body = text_body
